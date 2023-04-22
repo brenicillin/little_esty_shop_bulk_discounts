@@ -1,0 +1,14 @@
+<h1> <%= @discount.name %> </h1>
+
+<section id="edit-discount">
+  <%= form_with model: [@merchant, @discount], url: merchant_bulk_discount_path(@discount.merchant, @discount), method: :patch, local: true do |form| %>
+    <%= form.hidden_field :merchant_id, value: @discount.merchant_id %>
+    <%= form.label :name %>
+    <%= form.text_field :name %><br/>
+    <%= form.label :discount %>
+    <%= form.number_field :discount %><br/>
+    <%= form.label :threshold %>
+    <%= form.number_field :threshold %><br/>
+    <%= form.submit "Update Bulk Discount" %>
+  <% end %>
+</section>

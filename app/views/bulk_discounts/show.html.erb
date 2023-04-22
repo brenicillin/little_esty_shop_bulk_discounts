@@ -3,4 +3,8 @@
 <body>
   <p>Total Discount: <%= @discount.discount %>%</p>
   <p>Buy <%= @discount.threshold %> of any individual item to earn this discount!</p>
+
+  <section id="edit-discount">
+    <%= link_to "Edit Discount", edit_merchant_bulk_discount_path(@discount.merchant, @discount) %>
+  </section>
 </body>
