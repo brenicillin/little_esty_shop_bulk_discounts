@@ -1,0 +1,13 @@
+<h1>New Bulk Discount</h1>
+<section id="new-discount-form">
+  <%= form_with model: [@merchant, @discount], url: "/merchant/#{@merchant.id}/bulk_discounts", method: :post, local: true do |form| %>
+    <%= form.hidden_field :merchant_id, value: @merchant.id %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :discount %>
+    <%= form.number_field :discount %>
+    <%= form.label :threshold %>
+    <%= form.number_field :threshold %>
+    <%= form.submit "Create Bulk Discount" %>
+  <% end %>
+</section>
