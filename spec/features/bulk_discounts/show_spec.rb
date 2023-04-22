@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Bulk Discount Index Page' do
   before(:each) do
     @merchant = Merchant.create!(name: 'Merchant 1')
-    @discount_1 = BulkDiscount.create!(name: 'Discount 1', merchant_id: @merchant.id, threshold: 10, discount: 10)
-    @discount_2 = BulkDiscount.create!(name: 'Discount 2', merchant_id: @merchant.id, threshold: 20, discount: 20)
+    @discount_1 = BulkDiscount.create!(name: 'Discount 1', merchant_id: @merchant.id, threshold: 10, discount: 20)
+    @discount_2 = BulkDiscount.create!(name: 'Discount 2', merchant_id: @merchant.id, threshold: 30, discount: 40)
   end
 
   describe 'Bulk discount show page' do
