@@ -1,3 +1,11 @@
+Item.destroy_all
+Customer.destroy_all
+Merchant.destroy_all
+Invoice.destroy_all
+InvoiceItem.destroy_all
+Transaction.destroy_all
+BulkDiscount.destroy_all
+
 @merchant_1 = Merchant.create!(name: "Legolas' Lembas")
 @merchant_2 = Merchant.create!(name: "Sauron's Mordor Mart")
 @merchant_3 = Merchant.create!(name: "Bilbo's Burgers")
