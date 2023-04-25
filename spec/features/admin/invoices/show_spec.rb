@@ -77,7 +77,7 @@ describe 'Admin Invoices Index Page' do
   describe 'User Story 8' do
     it 'should display the total revenue with discounts' do
       visit admin_invoice_path(@i1)
-      save_and_open_page
+      
       expect(page).to have_content("Discounted Revenue: $1280.0")
     end
   end

@@ -65,4 +65,17 @@ RSpec.describe 'Bulk Discount Index Page' do
       expect(page).to_not have_content("Items to Earn Discount: 10")
     end
   end
+
+  describe 'Next 3 upcoming holidays' do
+    it 'has the next 3 holidays name and dates' do
+      visit merchant_bulk_discounts_path(@merchant)
+
+      within "#holidays" do
+        expect(page).to have_content("Upcoming Holidays")
+        expect(page).to have_content("Memorial Day - 2023-05-29")
+        expect(page).to have_content("Juneteenth - 2023-06-19")
+        expect(page).to have_content("Independence Day - 2023-07-04")
+      end
+    end
+  end
 end
