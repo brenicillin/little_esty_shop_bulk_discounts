@@ -28,7 +28,6 @@ RSpec.describe 'Bulk Discount Edit Page' do
       end
 
       expect(current_path).to eq(merchant_bulk_discount_path(@merchant, @discount_1))
-      save_and_open_page
       expect(page).to have_content("Discount 5")
       expect(page).to have_content(50)
       expect(page).to have_content(15)
