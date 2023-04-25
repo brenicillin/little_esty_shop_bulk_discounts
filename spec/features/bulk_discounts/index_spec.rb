@@ -8,7 +8,7 @@ RSpec.describe 'Bulk Discount Index Page' do
 
   end
   describe 'List of links to each bulk discount' do
-    it 'has a link to each bulk discount' do
+        it 'has a link to each bulk discount' do
       visit merchant_bulk_discounts_path(@merchant)
 
       within "#discount-#{@discount_1.id}" do

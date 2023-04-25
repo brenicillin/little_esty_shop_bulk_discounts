@@ -1,0 +1,3 @@
+id,merchant_id,threshold,discount,name
+1,1,15,10,10% off
+2,1,30,20,20% off

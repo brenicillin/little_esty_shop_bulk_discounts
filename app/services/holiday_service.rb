@@ -8,3 +8,5 @@ class HolidayService
     JSON.parse(response.body, symbolize_names: true)[0..2]
   end
 end
+
+47.5
