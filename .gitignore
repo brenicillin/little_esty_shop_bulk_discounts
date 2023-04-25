@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+!/tmp/pids
 coverage/
 coverage/.resultset.json
 coverage/index.html
